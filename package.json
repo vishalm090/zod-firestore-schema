@@ -1,0 +1,26 @@
+{
+  "name": "zod-firestore-schema-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.6.1",
+    "firebase": "^9.9.3",
+    "firebase-admin": "^11.0.1",
+    "flat": "^5.0.2",
+    "yup": "^0.32.11",
+    "zod": "^3.18.0"
+  },
+  "devDependencies": {
+    "typescript": "4.4.4",
+    "@types/flat": "^5.0.2"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": []
+}
