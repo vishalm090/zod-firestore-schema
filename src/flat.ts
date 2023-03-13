@@ -16,14 +16,14 @@ interface FlattenOption {
   maxDepth?: number;
   safe?: boolean;
   transformKey?: (key: string) => string;
-  ingnore?: (value: any) => boolean;
+  ignore?: (value: any) => boolean;
 }
 
 export function flatten(target: Record<string, any>, opts: FlattenOption = {}) {
   const delimiter = opts.delimiter || ".";
   const maxDepth = opts.maxDepth;
   const transformKey = opts.transformKey || keyIdentity;
-  const ignore = opts.ingnore || (() => false);
+  const ignore = opts.ignore || (() => false);
   const output: Record<string, any> = {};
 
   function step(
@@ -70,7 +70,7 @@ interface UnflattenOption {
   overwrite?: boolean;
   object?: boolean;
   transformKey?: (key: string) => string;
-  ingnore?: (value: any) => boolean;
+  ignore?: (value: any) => boolean;
 }
 
 export function unflatten(
@@ -80,7 +80,7 @@ export function unflatten(
   const delimiter = opts.delimiter || ".";
   const overwrite = opts.overwrite || false;
   const transformKey = opts.transformKey || keyIdentity;
-  const ignore = opts.ingnore || (() => false);
+  const ignore = opts.ignore || (() => false);
   const result: Record<string, any> = {};
 
   const isbuffer = isBuffer(target);
